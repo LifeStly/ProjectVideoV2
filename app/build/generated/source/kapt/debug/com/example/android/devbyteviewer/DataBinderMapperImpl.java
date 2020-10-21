@@ -9,6 +9,7 @@ import androidx.databinding.ViewDataBinding;
 import com.example.android.devbyteviewer.databinding.ActivityDevByteViewerBindingImpl;
 import com.example.android.devbyteviewer.databinding.DevbyteItemBindingImpl;
 import com.example.android.devbyteviewer.databinding.FragmentDevByteBindingImpl;
+import com.example.android.devbyteviewer.databinding.FragmentNoteBindingImpl;
 import java.lang.IllegalArgumentException;
 import java.lang.Integer;
 import java.lang.Object;
@@ -26,12 +27,15 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_FRAGMENTDEVBYTE = 3;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(3);
+  private static final int LAYOUT_FRAGMENTNOTE = 4;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(4);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.android.devbyteviewer.R.layout.activity_dev_byte_viewer, LAYOUT_ACTIVITYDEVBYTEVIEWER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.android.devbyteviewer.R.layout.devbyte_item, LAYOUT_DEVBYTEITEM);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.android.devbyteviewer.R.layout.fragment_dev_byte, LAYOUT_FRAGMENTDEVBYTE);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.android.devbyteviewer.R.layout.fragment_note, LAYOUT_FRAGMENTNOTE);
   }
 
   @Override
@@ -60,6 +64,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new FragmentDevByteBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_dev_byte is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTNOTE: {
+          if ("layout/fragment_note_0".equals(tag)) {
+            return new FragmentNoteBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_note is invalid. Received: " + tag);
         }
       }
     }
@@ -106,23 +116,25 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(4);
+    static final SparseArray<String> sKeys = new SparseArray<String>(5);
 
     static {
       sKeys.put(0, "_all");
-      sKeys.put(1, "video");
-      sKeys.put(2, "videoCallback");
-      sKeys.put(3, "viewModel");
+      sKeys.put(1, "noteViewModel");
+      sKeys.put(2, "video");
+      sKeys.put(3, "videoCallback");
+      sKeys.put(4, "viewModel");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(3);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(4);
 
     static {
       sKeys.put("layout/activity_dev_byte_viewer_0", com.example.android.devbyteviewer.R.layout.activity_dev_byte_viewer);
       sKeys.put("layout/devbyte_item_0", com.example.android.devbyteviewer.R.layout.devbyte_item);
       sKeys.put("layout/fragment_dev_byte_0", com.example.android.devbyteviewer.R.layout.fragment_dev_byte);
+      sKeys.put("layout/fragment_note_0", com.example.android.devbyteviewer.R.layout.fragment_note);
     }
   }
 }

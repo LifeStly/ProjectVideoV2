@@ -24,4 +24,8 @@
             android:id="@+id/action_homeFragment_to_devByte"
             app:destination="@id/devByte" />
     </fragment>
+    <fragment
+        android:id="@+id/noteFragment"
+        android:name="com.example.android.devbyteviewer.note.notejop.NoteFragment"
+        android:label="NoteFragment" />
 </navigation>

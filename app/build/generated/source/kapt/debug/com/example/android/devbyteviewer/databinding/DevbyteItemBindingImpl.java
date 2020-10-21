@@ -23,7 +23,7 @@ public class DevbyteItemBindingImpl extends DevbyteItemBinding implements com.ex
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback1;
+    private final android.view.View.OnClickListener mCallback2;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -49,7 +49,7 @@ public class DevbyteItemBindingImpl extends DevbyteItemBinding implements com.ex
         this.videoThumbnail.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback1 = new com.example.android.devbyteviewer.generated.callback.OnClickListener(this, 1);
+        mCallback2 = new com.example.android.devbyteviewer.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -140,7 +140,7 @@ public class DevbyteItemBindingImpl extends DevbyteItemBinding implements com.ex
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.clickableOverlay.setOnClickListener(mCallback1);
+            this.clickableOverlay.setOnClickListener(mCallback2);
         }
         if ((dirtyFlags & 0x6L) != 0) {
             // api target 1
