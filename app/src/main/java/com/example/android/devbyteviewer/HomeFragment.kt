@@ -26,7 +26,4 @@ class HomeFragment : Fragment() {
             view!!.findNavController()
         ) || super.onOptionsItemSelected(item)
     }
-
-    private fun addNickname(view: View) {
-    }
 }
